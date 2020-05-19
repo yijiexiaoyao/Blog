@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/01.css" />
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('.menux p').click(function () {
+                $(this).siblings('ul').slideUp(200);
+                $(this).next('ul').slideToggle(200);
+            });
+            $('.menux ul a').click(function () {
+
+                $('iframe').attr('src',$(this).attr("url"))
+            });
+        })
+    </script>
+</head>
+<body >
+
+    <div class="header">
+        <div class="logo">学生选课系统</div>
+        <div class="user">
+            <i class="fa fa-caret-down point" ></i>
+            <i class="fa fa-user"></i>
+            管理员
+            <ul>
+                <li>
+                    <a href="javascript:void (0);"></a>
+                    修改密码
+                </li>
+                <li>
+                    <a href="javascript:void (0);"></a>
+                    个人信息
+                </li>
+                <li>
+                    <a href="javascript:void (0);"></a>
+                    退出登录
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="left">
+        <div class="title">
+            <i class="fa fa-home"></i>
+                系统功能
+        </div>
+        <div class="menux">
+            <p>
+                <i class="fa fa-angle-right point"></i>
+                一级功能名称
+            </p>
+            <ul>
+                <li>
+                    <a href="javascript:void(0);" url="1.html">子功能1</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" url="main.html">子功能2</a>
+                </li>
+                <li>
+                    <a href="#">子功能3</a>
+                </li>
+            </ul>
+            <p>
+                <i class="fa fa-angle-right point"></i>
+                一级功能名称
+            </p>
+            <ul>
+                <li>子功能1</li>
+                <li>子功能1</li>
+                <li>子功能1</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <iframe src="main.html" width="100%" height="98%" frameborder="0px"></iframe>
+    </div>
+</body>
+</html>

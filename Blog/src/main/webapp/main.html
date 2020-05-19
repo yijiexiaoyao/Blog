@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/02.css">
+</head>
+<body >
+<div class="header">
+    <div class="logo">我的Blog</div>
+
+    <div class="user">
+        <i class="fa fa-caret-down point" ></i>
+        <i class="fa fa-user"></i>
+        管理员
+        <ul>
+            <li>
+                <a href="javascript:void (0);"></a>
+                修改密码
+            </li>
+            <li>
+                <a href="javascript:void (0);"></a>
+                个人信息
+            </li>
+            <li>
+                <a href="javascript:void (0);"></a>
+                退出登录
+            </li>
+        </ul>
+    </div>
+    <div class="munu">
+        留言
+    </div>
+</div>
+
+<!--页面内容-->
+<div class="">
+    <div class="">
+        <div class="">
+        </div>
+        <!--搜索条-->
+
+        <div class="">
+            <nav style="" class="">
+                <div class="">
+                    <form method="post" action="home?search=true">
+                        <div class="input-field">
+                            <input id="search" type="search" name="s_content" required>
+                            <label class="" for="search">
+                                <i class="">search</i>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+
+            <div class="card grey hoverable">
+                <div class="card-content white-text">
+                    <span class="card-title">最近文章</span>
+                    <table>
+                        <c:forEach var="recentArticle" items="${recentArticles}">
+                            <tr class="hoverable">
+                                <td><a class="white-text" href="article?articleId=${recentArticle.id}"></a></td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card grey hoverable">
+                <div class="card-content white-text">
+                    <span class="card-title">最近回复</span>
+                    <table>
+                        <c:forEach var="recentMessage" items="${recentMessages}">
+                            <tr class="hoverable">
+                                <td><a class="" href="message?action=leaveMessage"></a></td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%--页脚--%>
+<footer class="">
+    <div class="">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">反馈</h5>
+                <p class="grey-text text-lighten-4">
+                    如果您有什么建议或者发现了什么bug，可以通过我的邮箱反馈给我<br>
+                    <i class="">mail</i>
+                    <a href="">666666@gmail.com</a>
+                </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">友情链接</h5>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="">
+            © 2020 MyBlog
+        </div>
+    </div>
+</footer>
+</body>
+</html>
